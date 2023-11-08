@@ -8,12 +8,24 @@
   <ion-label class="welcomemsg">
     <ion-text color="light">Welcome Back</ion-text>
     <ion-text color="light">
-      <p>Log In !</p>
+      <p>Sign Up !</p>
     </ion-text>
   </ion-label>
 
+  <ion-icon name="arrow-back-outline" color="light" routerLink="/home" class="backBtn">
+
+  </ion-icon>
+
   <form>
     <ion-list lines="none" class="ion-margin ion-padding ion-text-center">
+
+      <ion-item class="ion-margin-vertical">
+        <ion-icon name="person-outline" slot="end" color="medium"></ion-icon>
+        <ion-input
+          placeholder="Enter User name" type="text" required=""
+        ></ion-input>
+      </ion-item>
+
       <ion-item class="ion-margin-vertical">
         <ion-icon name="mail-outline" slot="end" color="medium"></ion-icon>
         <ion-input
@@ -29,26 +41,27 @@
       </ion-item>
 
       <ion-row class="ion-margin-vertical">
-       <ion-col size="6" class="alignItems">
+       <ion-col size="12" class="alignItems">
         <div align="left"><ion-checkbox></ion-checkbox>
-          <ion-note>Remember me</ion-note>
+          <ion-note>I accept the policy and terms</ion-note>
         </div>
        </ion-col>
 
-       <ion-col size="6">
+       <!-- <ion-col size="6">
         <div align="right">
           <ion-note color="primary">Forget Password ?</ion-note>
         </div>
-       </ion-col>
+       </ion-col> -->
       </ion-row>
 
-      <ion-button color="primary" type="submit" (click)="onSubmit()" shape="round">Log in</ion-button>
+      <ion-button color="primary" type="submit"  shape="round">Sign-up</ion-button>
 
       <p class="signup">
         <ion-note>
-          Not a member yet? <ion-text color="primary" routerLink="./signup">Sign Up</ion-text>
+          you are already memeber ? <ion-text color="primary" routerLink="/home">Login </ion-text>
         </ion-note>
       </p>
     </ion-list>
   </form>
 </ion-content>
+
