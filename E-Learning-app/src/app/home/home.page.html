@@ -1,0 +1,54 @@
+<ion-content [fullscreen]="true">
+  <div class="circleBase type2 circle1"></div>
+
+  <div class="circleBase type1"></div>
+
+  <div class="circleBase type2 circle2"></div>
+
+  <ion-label class="welcomemsg">
+    <ion-text color="light">Welcome Back</ion-text>
+    <ion-text color="light">
+      <p>Log In !</p>
+    </ion-text>
+  </ion-label>
+
+  <form>
+    <ion-list lines="none" class="ion-margin ion-padding ion-text-center">
+      <ion-item class="ion-margin-vertical">
+        <ion-icon name="mail-outline" slot="end" color="medium"></ion-icon>
+        <ion-input
+          placeholder="Enter Email Address" required=""
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="lock-closed-outline" slot="end" color="medium"></ion-icon>
+        <ion-input
+          placeholder="Enter Password"  required=""
+        ></ion-input>
+      </ion-item>
+
+      <ion-row class="ion-margin-vertical">
+       <ion-col size="6" class="alignItems">
+        <div align="left"><ion-checkbox></ion-checkbox>
+          <ion-note>Remember me</ion-note>
+        </div>
+       </ion-col>
+
+       <ion-col size="6">
+        <div align="right">
+          <ion-note color="primary">Forget Password ?</ion-note>
+        </div>
+       </ion-col>
+      </ion-row>
+
+      <ion-button color="primary" type="submit" (click)="onSubmit()" shape="round">Log in</ion-button>
+
+      <p class="signup">
+        <ion-note>
+          Not a member yet? <ion-text color="primary">Sign Up</ion-text>
+        </ion-note>
+      </p>
+    </ion-list>
+  </form>
+</ion-content>
